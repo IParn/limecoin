@@ -2424,7 +2424,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
         // Check proof of work
         /*        
-        if(nHeight >= 34140 && nHeight <= 45000){
+        if(nHeight >= 1400 && nHeight <= 1600){
             unsigned int nBitsNext = GetNextWorkRequired(pindexPrev, this);
             unsigned int a = 0;
             if(nBits > nBitsNext) a = nBits - nBitsNext;
@@ -2442,7 +2442,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
 
         // Prevent blocks from too far in the future
-        if(fTestNet || nHeight >= 45000){
+        if(fTestNet || nHeight >= 1600){
             if (GetBlockTime() > GetAdjustedTime() + 15 * 60) {
                 return error("AcceptBlock() : block's timestamp too far in the future");
             }
