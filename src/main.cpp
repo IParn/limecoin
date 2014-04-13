@@ -2438,7 +2438,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
         } else {*/
             if (nBits != GetNextWorkRequired(pindexPrev, this))
                 return state.DoS(100, error("AcceptBlock() : incorrect proof of work"));
-        //}
+       // }
 
 
         // Prevent blocks from too far in the future
